@@ -1,7 +1,5 @@
 'use client'
 
-'use client'
-
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
@@ -10,7 +8,7 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 
 export default function Page() {
   return (
-    <View className='w-96 h-96'>
+    <View className='size-96'>
       <Suspense fallback={null}>
         <ShaderGradient cDistance={24} color1='#ff5005' color2='#dbba95' color3='#d0bce1' />
       </Suspense>
